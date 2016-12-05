@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes Application</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+    <script src="notes.js"></script>
+</head>
+<body ng-controller="NotesController">
+    <div ng-repeat="note in viewNotes">
+        <p class="note" ng-mouseenter="" ng-bind="note.text"></p>
+    </div>
+    <button ng-click="update(rewritedNotes)">Update</button>
+    <button ng-click="update(defaultNotes)">Clear</button>
+</body>
+</html>
