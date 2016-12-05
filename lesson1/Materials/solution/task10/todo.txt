@@ -1,0 +1,6 @@
+In this task you have to work create and validate the form.
+
+Additional tasks:
+1) Check that user's age is >12 (create directive)
+2) Implement drop-down to select country and city (list of countries and cities should be stored in database), so that if user selects country, the list of cities would be loaded
+

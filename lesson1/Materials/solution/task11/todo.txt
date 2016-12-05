@@ -1,0 +1,17 @@
+In this task you will submit the form and create users on server side.
+
+1) Execute mongo
+2) Run
+use user
+db.sections.update({},{$set:{userName:"demo"}}, {multi:true})
+db.notes.update({},{$set:{userName:"demo"}}, {multi:true})
+db.users.insert({userName:"demo",password:"demo"})
+3) Check updates:
+show collections
+db.sections.find()
+db.users.find()
+db.notes.find()
+
+Additional tasks:
+1) Check that user's age is >12 (create directive)
+2) Implement drop-down to select country and city (list of countries and cities should be stored in database)

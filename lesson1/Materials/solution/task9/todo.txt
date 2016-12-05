@@ -1,0 +1,7 @@
+In this task you have to work with the routes and give possibility to view section with its own URL.
+
+Additional tasks:
+1) Make notes dragable
+2) Add the filter for the notes
+3) Move/copy note to another section
+4) Create web site on the base of notes

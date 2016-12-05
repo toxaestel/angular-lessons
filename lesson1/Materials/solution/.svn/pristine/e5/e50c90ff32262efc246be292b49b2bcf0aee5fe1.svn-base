@@ -1,0 +1,6 @@
+In this task you have to store session in mongodb.
+
+For that aim, you have to execute mongodb:
+- create db folder
+- execute it from the task folder: <PATH_TO_MONGODB>/bin/mongod --dbpath ./db
+

@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app="myapp">
+	<head>
+		<title>Notes application</title>
+		<script src="angular.js"></script>
+    	<script src="notes.js"></script>
+        <link rel="stylesheet" href="styles.css"> 
+	</head>
+
+	<body ng-controller="NotesController">
+        <div ng-repeat="note in notes">
+            <p class="note">{{note.text}}
+                <button ng-click="remove(note._id)">Remove</button>
+            </p>
+        </div>
+		
+		Add note:<br>
+		<textarea rows="10" cols="50" ng-model="text"></textarea>
+		<button ng-click="add()">Add note</button>
+	</body>
+</html>

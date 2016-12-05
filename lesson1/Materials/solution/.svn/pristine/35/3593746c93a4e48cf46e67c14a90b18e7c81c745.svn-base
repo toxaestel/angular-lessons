@@ -1,0 +1,5 @@
+In this task you have to implement saving notes in session.
+
+Additional tasks:
+- implement delete of the note
+- implement find for note by its contents

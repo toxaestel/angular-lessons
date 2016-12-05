@@ -1,0 +1,4 @@
+To execute server, you have to run:
+npm install
+node server.js
+

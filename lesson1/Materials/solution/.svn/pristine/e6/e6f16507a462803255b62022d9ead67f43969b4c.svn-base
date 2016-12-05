@@ -1,0 +1,5 @@
+In this task you have to store notes in mongodb.
+
+Additional tasks:
+1) implement order and remove note
+2) Add date and time for the note

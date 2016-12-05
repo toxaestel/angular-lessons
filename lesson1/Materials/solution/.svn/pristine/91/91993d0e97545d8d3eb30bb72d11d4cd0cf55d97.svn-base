@@ -1,0 +1,8 @@
+In this task you have to store notes in file notes.json.
+
+Additional tasks:
+1) implement indexes and remove note
+2) implement multiuser support
+- create multiuser application by keeping user in session
+- name json files as <name_of_user>.json
+

@@ -1,0 +1,15 @@
+<!doctype html>
+<html ng-app="myapp">
+	<head>
+		<title>Notes application</title>
+		<script src="angular.js"></script>
+    	<script src="notes.js"></script>
+    	<link rel="stylesheet" href="styles.css"> 
+	</head>
+
+	<body ng-controller="NotesController">
+		<div ng-repeat="note in notes">
+			<p class="note">{{note.text}}</p>
+		</div>
+	</body>
+</html>
