@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+    <script src="hello.js"></script>
+</head>
+<body>
+    <div ng-controller="HelloController">
+        Your name: <input ng-model="name">
+        <button ng-click="update()">update</button>
+        {{ greeting }}
+    </div>
+</body>
+</html>
