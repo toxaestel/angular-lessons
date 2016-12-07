@@ -10,11 +10,18 @@
 <body ng-controller="NotesController">
     Add note:<br>
     <textarea rows="10" cols="50" ng-model="text"></textarea>
-    <button ng-click="add()">Add note</button>
+    <button ng-click="add()">Add note</button><br />
+    <select ng-model="orderSort">
+        <option value="byOrder">Sort by order</option>
+        <option value="byText">Sort by text</option>
+        <option value="byDate">Sort by date</option>
+    </select><br />
     <div ng-repeat="note in notes">
         <p class="note">
-            {{note.text}}
-            <button ng-click="remove(note.id)">Remove note</button>
+            {{note.text}}<br />
+            {{note.date | date: 'HH:mm dd.MM.yyyy'}}
+            <button ng-click="remove(note._id)">Remove note</button>
+            <button ng-click="sendToTop(note.orderID)">Send to top</button>
         </p>
     </div>
 </body>
