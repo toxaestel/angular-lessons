@@ -23,7 +23,7 @@ module.controller('NotesController', function ($scope, $http) {
             });
     };
 
-    $scope.remove = function () {
+    $scope.remove = function (id) {
         $http.delete('/notes', {params: {id: id}})
             .success(function () {
                 update();

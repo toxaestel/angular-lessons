@@ -11,7 +11,11 @@
     Add note:<br>
     <textarea rows="10" cols="50" ng-model="text"></textarea>
     <button ng-click="add()">Add note</button>
-    <button ng-click="remove(note.id)">Remove note</button>
-    <div class="note" ng-repeat="note in notes" ng-bind="note.text"></div>
+    <div ng-repeat="note in notes">
+        <p class="note">
+            {{note.text}}
+            <button ng-click="remove(note.id)">Remove note</button>
+        </p>
+    </div>
 </body>
 </html>
