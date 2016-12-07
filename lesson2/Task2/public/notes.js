@@ -13,6 +13,20 @@ module.controller('NotesController', function ($scope, $http) {
     update();
     
     $scope.add = function () {
-        var note = {text: $scope.text};
+        var note = {
+            text: $scope.text
+        };
+        $http.post('/notes', note)
+            .success(function () {
+                $scope.text = '';
+                update();
+            });
     };
+
+    $scope.remove = function () {
+        $http.delete('/notes', {params: {id: id}})
+            .success(function () {
+                update();
+            });
+    }
 });
