@@ -1,0 +1,41 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">User registration form</div>
+    <div class="panel-body">
+        <form class="css-form" name="userForm" ng-submit="submitForm()" novalidate>
+            <div class="form-group">
+                <label for="userName">User name</label>
+                <input type="text" class="form-control" id="userName" name="userName" placeholder="Username" required
+                       ng-model="user.userName" unique-user />
+                <span ng-show="userForm.userName.$dirty && userForm.userName.$error.unique">User name is not unique</span>
+            </div>
+            <div class="form-group">
+                <label for="userName">Password</label>
+                <input type="password" class="form-control" id="userPwd" name="userPwd" placeholder="Password" required
+                       ng-model="user.userPwd" />
+            </div>
+            <div class="form-group">
+                <label for="userName">Repeat password</label>
+                <input type="password" class="form-control" id="userPwd2" name="userPwd2" placeholder="Repeat password" required
+                       ng-model="user.userPwd2" match-to="user.userPwd" />
+                <span ng-show="userForm.userPwd2.$touched && userForm.userPwd2.$error.matchTo">Passwords should match</span>
+            </div>
+            <div class="form-group">
+                <label for="userName">Date of birth</label>
+                <input type="text" class="form-control" id="userBirth" name="userBirth" placeholder="Date"
+                       ng-model="user.userBirth" ng-pattern="/^[0-9][0-9]\.[0-1][0-9]\.[1-2][0-9][0-9][0-9]$/"/>
+                <span ng-show="userForm.userBirth.$error.pattern">Date of birth should be in format dd.mm.yyyy</span>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="user.subscribe">
+                    Subscribe for newsletters
+                </label>
+            </div>
+            <div class="form-group" ng-show="user.subscribe">
+                <label for="userName">Email</label>
+                <input type="email" class="form-control" id="userMail" name="userMail" placeholder="E-mail" ng-model="user.userMail" />
+            </div>
+            <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button>
+        </form>
+    </div>
+</div>
